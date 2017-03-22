@@ -169,6 +169,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BulkDeviceTester.cs" />
+    <Compile Include="CGMDevice\CommandProcessors\CGMChangeDeviceStateCommandProcessor.cs" />
+    <Compile Include="CGMDevice\CommandProcessors\CGMChangeSetPointTempCommandProcessor.cs" />
+    <Compile Include="CGMDevice\CommandProcessors\CGMDiagnosticTelemetryCommandProcessor.cs" />
+    <Compile Include="CGMDevice\CommandProcessors\CGMStartCommandProcessor.cs" />
+    <Compile Include="CGMDevice\CommandProcessors\CGMStopCommandProcessor.cs" />
+    <Compile Include="CGMDevice\Devices\CBGMDevice.cs" />
+    <Compile Include="CGMDevice\Devices\Factory\CBGMDeviceFactory.cs" />
+    <Compile Include="CGMDevice\Telemetry\Data\CGMRemoteMonitorTelemetryData.cs" />
+    <Compile Include="CGMDevice\Telemetry\Factory\CGMTelemetryFactory.cs" />
+    <Compile Include="CGMDevice\Telemetry\CGMRemoteMonitorTelemetry.cs" />
+    <Compile Include="CGMDevice\Telemetry\CGMStartupTelemetry.cs" />
     <Compile Include="DataInitialization\DataInitializer.cs" />
     <Compile Include="DataInitialization\IDataInitializer.cs" />
     <Compile Include="SimulatorCore\CommandProcessors\CommandProcessor.cs" />
@@ -258,6 +269,7 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
